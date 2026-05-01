@@ -1,0 +1,445 @@
+<html>
+
+<head>
+
+<title> calculator </title>
+<style>
+
+body {
+    background: radial-gradient(circle at top, #4A00E0, #8E2DE2, #1CB5E0);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+/* Title */
+#mb {
+    text-align: center;
+    color: #ffffff;
+    font-size: 42px;
+    letter-spacing: 3px;
+    font-family: "Algerian";
+    text-shadow: 0 0 15px #000;
+    margin-bottom: 20px;
+}
+
+/* Calculator Box */
+.cal {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+/* Input Display */
+input {
+    width: 100%;
+    height: 70px;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 12px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.7);
+    box-shadow: inset 0 0 10px #00000050;
+    text-align: right;
+}
+
+/* Buttons */
+button {
+    width: 65px;
+    height: 55px;
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    background: rgba(255,255,255,0.9);
+    transition: 0.25s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Hover Glow */
+button:hover {
+    background: #00d4ff;
+    color: black;
+    transform: scale(1.15);
+    box-shadow: 0 0 15px #00eaff;
+}
+
+/* Click Animation */
+button:active {
+    transform: scale(0.92);
+}
+
+/* Special Buttons (operators) */
+td button:nth-child(4),
+td button:nth-child(3),
+td button:nth-child(2) {
+    background: rgba(255, 255, 255, 0.85);
+}
+
+/* Equal Button */
+button[name="b18"] {
+    background: #00ff9d;
+    font-weight: bold;
+    box-shadow: 0 0 15px #00ff9d;
+}
+
+button[name="b18"]:hover {
+    background: #00ffaa;
+}
+
+#mb {
+    margin-top: 15px;
+    }
+
+#t1 {
+    margin-bottom: 15px;
+}
+
+</style>
+
+<script>
+
+var N1
+var N2
+var opt
+var res
+
+function calc(ob)
+
+{
+
+if(ob=='b1')
+
+{
+
+var s= document.getElementById('t1').value
+
+s=s+"1"
+
+document.getElementById('t1').value=s
+
+}
+
+else if(ob=='b2')
+
+{
+
+var s= document.getElementById('t1').value
+
+s=s+"2"
+
+document.getElementById('t1').value=s
+
+}
+
+else if(ob=='b3')
+
+{
+
+var s= document.getElementById('t1').value
+
+s=s+"3"
+
+document.getElementById('t1').value=s
+
+}
+else if(ob=='b4')
+
+{
+ N1=parseFloat(document.getElementById('t1').value)
+
+opt='+'
+
+document.getElementById('t1').value=""
+
+
+}
+else if(ob=='b5')
+
+{
+
+var s= document.getElementById('t1').value
+
+s=s+"4"
+
+document.getElementById('t1').value=s
+
+}
+else if(ob=='b6')
+
+{
+
+var s= document.getElementById('t1').value
+
+s=s+"5"
+
+document.getElementById('t1').value=s
+
+}
+else if(ob=='b7')
+
+{
+
+var s= document.getElementById('t1').value
+
+s=s+"6"
+
+document.getElementById('t1').value=s
+
+}
+else if(ob=='b8')
+
+{
+N1=parseFloat(document.getElementById('t1').value)
+
+opt='-'
+
+document.getElementById('t1').value=""
+
+}
+else if(ob=='b9')
+
+{
+
+var s= document.getElementById('t1').value
+
+s=s+"7"
+
+document.getElementById('t1').value=s
+
+}
+else if(ob=='b10')
+
+{
+
+var s= document.getElementById('t1').value
+
+s=s+"8"
+
+document.getElementById('t1').value=s
+
+}
+else if(ob=='b11')
+
+{
+
+var s= document.getElementById('t1').value
+
+s=s+"9"
+
+document.getElementById('t1').value=s
+
+}
+else if(ob=='b12')
+
+{
+N1=parseFloat(document.getElementById('t1').value)
+
+opt='*'
+
+document.getElementById('t1').value=""
+}
+
+
+else if(ob=='b13')
+
+{
+
+var s= document.getElementById('t1').value
+
+s=s+"0"
+
+document.getElementById('t1').value=s
+
+}
+
+else if(ob=='b14')
+
+{
+
+var s= document.getElementById('t1').value
+
+s=s+"."
+
+document.getElementById('t1').value=s
+
+}
+
+else if(ob=='b15')
+
+{
+N1=parseFloat(document.getElementById('t1').value)
+opt='^'
+document.getElementById('t1').value=""
+
+}
+
+else if(ob=='b16')
+{
+N1=parseFloat(document.getElementById('t1').value)
+
+opt='/'
+
+document.getElementById('t1').value=""
+
+}
+else if(ob=='b17')
+
+{
+
+var s= document.getElementById('t1').value
+
+s=s+"c"
+
+document.getElementById('t1').value=s
+
+}
+
+else if(ob=='b19')
+
+{
+
+var s= document.getElementById('t1').value
+
+
+
+document.getElementById('t1').value=""
+
+}
+
+else if(ob=='b18')
+
+{
+       N2=parseFloat(document.getElementById('t1').value)
+       if(opt=="+")
+       {
+        res=N1+N2
+      document.getElementById('t1').value=res
+     }
+      else if(opt=="-")
+      {
+       res=N1-N2
+       document.getElementById('t1').value=res
+        }
+
+       else if(opt=="*")
+      {
+       res=N1*N2
+       document.getElementById('t1').value=res
+        }
+       else if (opt=="/")
+      {
+      res=N1/N2
+       document.getElementById('t1').value=res
+        }
+  else if (opt=="^")
+      {
+      res=Math.pow(N1,N2)
+       document.getElementById('t1').value=res
+        }
+}
+
+}
+</script>
+
+
+</head>
+
+<body>
+
+
+
+
+<div class="cal"> 
+
+<table>
+
+<tr>
+
+<td colspan=4>
+
+<input type="text"  name="t1" id="t1">
+
+</td>
+
+</tr>
+
+<tr>
+
+<td><button name="b1" onClick=calc('b1')> 1 </button> </td>
+
+<td><button name="b2" onClick=calc('b2')> 2 </button> </td>
+
+<td><button name="b3" onClick=calc('b3')> 3 </button> </td>
+
+<td><button name="b4" onClick=calc('b4')> + </button> </td>
+
+</tr>
+
+<tr>
+
+<td><button name="b5" onClick=calc('b5')> 4  </button> </td>
+
+<td><button name="b6" onClick=calc('b6')> 5   </button></td>
+
+<td><button name="b7" onClick=calc('b7')> 6   </button></td>
+
+<td><button name="b8" onClick=calc('b8')> -  </button> </td>
+
+
+
+</tr>
+
+<tr>
+
+<td><button name="b9" onClick=calc('b9')> 7  </button> </td>
+
+<td><button name="b10" onClick=calc('b10')> 8  </button> </td>
+
+<td><button name="b11" onClick=calc('b11')> 9 </button></td>
+
+<td><button name="b12" onClick=calc('b12')> * </button></td>
+
+
+
+</tr>
+
+<tr>
+
+<td><button name="b13" onClick=calc('b13')> 0 </button> </td>
+
+<td><button name="b14" onClick=calc('b14')> .   </button> </td>
+
+<td><button name="b15" onClick=calc('b15')> ^  </button> </td>
+
+<td><button name="b16" onClick=calc('b16')> /  </button> </td>
+
+</tr>
+
+
+
+<tr>
+
+<td><button name="b17" onClick=calc('b17')> c  </button> </td>
+
+<td colspan=2><button name="b18" onClick=calc('b18')> =   </button> </td>	
+
+<td><button name="b19" onClick=calc('b19') >  CE  </button> </td>
+
+</tr>
+<h1 id="mb">calculator</h1>
+
+</table>
+</div>
+</body>
+
+</html>
