@@ -26,6 +26,6 @@ A simple and attractive calculator web application built using **HTML, CSS, and 
 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/abhay-singh-bisht12/calculator/main/image/home.png" width="45%">
+  <img src="https://raw.githubusercontent.com/abhay-singh-bisht12/calculator/main/image/image/home.png" width="45%">
 
 </p>
