@@ -25,5 +25,7 @@ A simple and attractive calculator web application built using **HTML, CSS, and 
 ## 📸 Project Preview
 
 
-```html
-<img src="home.png" width="600">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/abhay-singh-bisht12/calculator/main/image/home.png" width="45%">
+
+</p>
